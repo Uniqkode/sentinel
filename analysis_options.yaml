@@ -1,0 +1,5 @@
+include: package:jaspr_lints/recommended.yaml
+
+analyzer:
+  plugins:
+    - jaspr_lints

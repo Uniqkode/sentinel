@@ -1,0 +1,23 @@
+# Dart / Jaspr
+.dart_tool/
+.packages
+build/
+.pub-cache/
+.pub/
+pubspec.lock
+
+# Node / npm
+node_modules/
+package-lock.json
+
+# Generated CSS (rebuild with: npx tailwindcss -i web/styles.tw.css -o web/styles.css)
+# web/styles.css  -- keeping this in repo so the site works out of the box
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

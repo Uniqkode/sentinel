@@ -1,0 +1,18 @@
+name: sentinel
+description: Sentinel - Autonomous AI Security Agent for API Regression & Data Leak Detection
+version: 0.1.0
+
+environment:
+  sdk: ">=3.10.0 <4.0.0"
+
+dependencies:
+  jaspr: ^0.23.2
+  jaspr_router: ^0.8.3
+
+dev_dependencies:
+  jaspr_builder: ^0.23.2
+  jaspr_lints: ^0.7.2
+  build_runner: ^2.15.0
+
+jaspr:
+  mode: static
