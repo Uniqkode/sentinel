@@ -10,7 +10,7 @@ class ContactSection extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return SectionWrapper(
-      dark: false,
+      dark: true,
       id: 'contact',
       children: [
         div(
@@ -20,23 +20,31 @@ class ContactSection extends StatelessComponent {
               div(classes: 'scroll-reveal', [
                 p(
                   classes:
-                      'text-cyan-500 font-semibold text-sm uppercase tracking-wider mb-3',
+                      'text-rose-400 font-semibold text-sm uppercase tracking-wider mb-3',
                   [Component.text('Contact')],
                 ),
                 h2(
                   classes:
-                      'text-3xl md:text-4xl font-bold text-slate-900 mb-6',
+                      'text-3xl md:text-4xl font-bold text-white mb-6',
                   [Component.text("Let's Talk Security")],
                 ),
                 p(
                   classes:
-                      'text-slate-600 text-lg leading-relaxed mb-8',
+                      'text-slate-400 text-lg leading-relaxed mb-8',
                   [
                     Component.text(
                       'Have questions about integrating Sentinel into your CI/CD pipeline? Want to discuss enterprise plans or schedule a live demo? Our team is here to help.',
                     ),
                   ],
                 ),
+                div(classes: 'max-w-2xl mx-auto mb-8 scroll-reveal', [
+                  img(
+                    src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000&h=400&fit=crop&q=80',
+                    alt: 'Enterprise Office',
+                    classes: 'w-full rounded-2xl border border-slate-800',
+                    attributes: {'loading': 'lazy'},
+                  ),
+                ]),
                 div(classes: 'space-y-6', [
                   _ContactInfo(
                     icon: '\u{1F4CD}',
@@ -68,7 +76,7 @@ class ContactSection extends StatelessComponent {
               div(classes: 'scroll-reveal', attributes: {'data-delay': '200'}, [
                 div(
                   classes:
-                      'p-8 rounded-2xl bg-slate-50 border border-slate-200',
+                      'p-8 rounded-2xl bg-slate-900/80 border border-slate-800',
                   [
                     form(
                       action: 'https://formsubmit.co/${SiteConfig.formsubmitEmail}',
@@ -104,13 +112,13 @@ class ContactSection extends StatelessComponent {
                                 Component.text('Send Message'),
                               ],
                               classes:
-                                  'w-full px-6 py-3 bg-cyan-500 text-slate-950 font-semibold rounded-lg hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/25',
+                                  'w-full px-6 py-3 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-400 transition-all duration-300 shadow-lg shadow-rose-500/25',
                               attributes: {'type': 'submit'},
                             ),
                           ]),
                           p(
                             classes:
-                                'text-xs text-slate-400 text-center mt-3',
+                                'text-xs text-slate-500 text-center mt-3',
                             [
                               Component.text(
                                 'We respect your privacy. No spam, ever.',
@@ -134,13 +142,13 @@ class ContactSection extends StatelessComponent {
     return div([
       Component.element(
         tag: 'label',
-        classes: 'block text-sm font-medium text-slate-700 mb-1.5',
+        classes: 'block text-sm font-medium text-slate-300 mb-1.5',
         children: [
           Component.text(fieldLabel),
           if (required)
             Component.element(
                 tag: 'span',
-                classes: 'text-red-500 ml-0.5',
+                classes: 'text-red-400 ml-0.5',
                 children: [Component.text('*')]),
         ],
       ),
@@ -155,7 +163,7 @@ class ContactSection extends StatelessComponent {
             'pattern': '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}',
         },
         classes:
-            'w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-sm transition-all valid:border-cyan-500 invalid:border-red-500',
+            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm transition-all valid:border-rose-500 invalid:border-red-400',
       ),
     ]);
   }
@@ -164,7 +172,7 @@ class ContactSection extends StatelessComponent {
     return div([
       Component.element(
         tag: 'label',
-        classes: 'block text-sm font-medium text-slate-700 mb-1.5',
+        classes: 'block text-sm font-medium text-slate-300 mb-1.5',
         children: [Component.text(fieldLabel)],
       ),
       Component.element(
@@ -175,7 +183,7 @@ class ContactSection extends StatelessComponent {
           'rows': '4',
         },
         classes:
-            'w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-sm transition-all resize-none',
+            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm transition-all resize-none',
       ),
     ]);
   }
@@ -197,13 +205,13 @@ class _ContactInfo extends StatelessComponent {
     return div(classes: 'flex items-start space-x-4', [
       div(
         classes:
-            'w-10 h-10 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0',
+            'w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center shrink-0',
         [span(classes: 'text-lg', [Component.text(icon)])],
       ),
       div([
-        p(classes: 'text-sm font-medium text-slate-900',
+        p(classes: 'text-sm font-medium text-white',
             [Component.text(label)]),
-        p(classes: 'text-sm text-slate-500',
+        p(classes: 'text-sm text-slate-400',
             [Component.text(value)]),
       ]),
     ]);

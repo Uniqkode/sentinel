@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 class NotFoundPage extends StatelessComponent {
@@ -12,7 +12,7 @@ class NotFoundPage extends StatelessComponent {
       [
         div(classes: 'text-center px-4', [
           div(
-            classes: 'text-8xl font-bold text-cyan-400 mb-4',
+            classes: 'text-8xl font-bold text-rose-400 mb-4',
             [Component.text('404')],
           ),
           h1(
@@ -31,7 +31,7 @@ class NotFoundPage extends StatelessComponent {
           a(
             href: '/',
             classes:
-                'inline-flex items-center px-6 py-3 bg-cyan-500 text-slate-950 font-semibold rounded-lg hover:bg-cyan-400 transition-all duration-300',
+                'inline-flex items-center px-6 py-3 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-400 transition-all duration-300',
             [Component.text('\u2190 Back to Home')],
           ),
         ]),

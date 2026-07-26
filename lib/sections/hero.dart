@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/ui/button.dart';
@@ -28,7 +28,7 @@ class HeroSection extends StatelessComponent {
               attributes: {'data-delay': '100'},
               [
                 Component.text('Autonomous '),
-                span(classes: 'text-cyan-400', [Component.text('AI Security')]),
+                span(classes: 'text-rose-400', [Component.text('AI Security')]),
                 Component.text(' Agent for API Regression & Data Leak Detection'),
               ],
             ),
@@ -52,17 +52,11 @@ class HeroSection extends StatelessComponent {
                 ),
               ],
             ),
-            div(
-              classes: 'scroll-reveal-scale',
-              attributes: {'data-delay': '400'},
-              [
-                img(
-                  src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=750&fit=crop&q=80',
-                  alt: 'Sentinel Dashboard - API Security Monitoring',
-                  classes: 'mx-auto mt-12 rounded-2xl shadow-2xl shadow-cyan-500/10 border border-slate-800 max-w-4xl w-full float-animation',
-                  attributes: {'loading': 'eager'},
-                ),
-              ],
+            img(
+              src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=750&fit=crop&q=80',
+              alt: 'Sentinel Dashboard - API Security Monitoring',
+              classes: 'mx-auto mt-12 rounded-2xl shadow-lg shadow-rose-500/10 border border-slate-800 max-w-4xl w-full',
+              attributes: {'loading': 'eager'},
             ),
             div(
               classes:
@@ -70,7 +64,7 @@ class HeroSection extends StatelessComponent {
               [
                 div(
                   classes:
-                      'w-2 h-2 rounded-full bg-emerald-400 animate-pulse',
+                      'w-2 h-2 rounded-full bg-rose-400 animate-pulse',
                   [],
                 ),
                 span([Component.text('Trusted by backend teams building at scale')]),
@@ -97,6 +91,10 @@ class HeroSection extends StatelessComponent {
           classes: 'absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/70 to-slate-950',
           [],
         ),
+        div(
+          classes: 'absolute inset-0 bg-gradient-to-tr from-rose-500/5 via-transparent to-rose-500/5 pointer-events-none',
+          [],
+        ),
       ],
     );
   }
@@ -113,7 +111,7 @@ class HeroSection extends StatelessComponent {
               tag: 'style',
               children: [
                 Component.text(
-                  'background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 60px 60px;',
+                  'background-image: linear-gradient(rgba(244,63,94,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(244,63,94,0.3) 1px, transparent 1px); background-size: 60px 60px;',
                 ),
               ],
             ),

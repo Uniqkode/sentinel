@@ -18,7 +18,7 @@ class DemoFormSection extends StatelessComponent {
             div(classes: 'scroll-reveal-left', [
               p(
                 classes:
-                    'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                    'text-rose-400 font-semibold text-sm uppercase tracking-wider mb-3',
                 [Component.text('Book a Demo')],
               ),
               h2(
@@ -38,6 +38,14 @@ class DemoFormSection extends StatelessComponent {
                 _DemoFeature(text: 'Custom integration walkthrough'),
                 _DemoFeature(text: 'Security assessment report'),
                 _DemoFeature(text: 'No commitment required'),
+              ]),
+              div(classes: 'max-w-2xl mx-auto mt-8 mb-4 scroll-reveal', [
+                img(
+                  src: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1000&h=400&fit=crop&q=80',
+                  alt: 'Code Analysis in Action',
+                  classes: 'w-full rounded-2xl border border-slate-800',
+                  attributes: {'loading': 'lazy'},
+                ),
               ]),
             ]),
             div(
@@ -76,7 +84,7 @@ class DemoFormSection extends StatelessComponent {
                             Component.text('Request Demo'),
                           ],
                           classes:
-                              'w-full px-6 py-3 bg-cyan-500 text-slate-950 font-semibold rounded-lg hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/25 pulse-glow',
+                              'w-full px-6 py-3 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-400 transition-all duration-300 shadow-lg shadow-rose-500/25 pulse-glow',
                           attributes: {'type': 'submit'},
                         ),
                       ]),
@@ -126,7 +134,7 @@ class DemoFormSection extends StatelessComponent {
             'pattern': '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}',
         },
         classes:
-            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-sm transition-all valid:border-cyan-500 invalid:border-red-500',
+            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm transition-all valid:border-rose-500 invalid:border-red-400',
       ),
     ]);
   }
@@ -141,7 +149,7 @@ class DemoFormSection extends StatelessComponent {
       select(
         attributes: {'name': 'team_size'},
         classes:
-            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-sm transition-all',
+            'w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm transition-all',
         [
           option(value: '', [.text('Select team size')]),
           option(value: '1-5', [.text('1-5 engineers')]),
@@ -162,7 +170,7 @@ class _DemoFeature extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return div(classes: 'flex items-center space-x-3', [
-      span(classes: 'text-cyan-400 text-lg', [Component.text('\u2713')]),
+      span(classes: 'text-rose-400 text-lg', [Component.text('\u2713')]),
       span(classes: 'text-slate-300 text-sm', [Component.text(text)]),
     ]);
   }

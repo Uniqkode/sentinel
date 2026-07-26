@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -15,7 +15,7 @@ class ProblemSection extends StatelessComponent {
         div(classes: 'text-center mb-16 scroll-reveal', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('The Problem')],
           ),
           h2(
@@ -40,7 +40,7 @@ class ProblemSection extends StatelessComponent {
               classes: 'stagger-item text-center p-6',
               [
                 div(
-                  classes: 'text-3xl md:text-4xl font-bold text-cyan-400 mb-2',
+                  classes: 'text-3xl md:text-4xl font-bold text-rose-400 mb-2 shadow-lg shadow-rose-500/10',
                   attributes: {'data-counter': '70', 'data-suffix': '%'},
                   [Component.text('0%')],
                 ),
@@ -54,7 +54,7 @@ class ProblemSection extends StatelessComponent {
               classes: 'stagger-item text-center p-6',
               [
                 div(
-                  classes: 'text-3xl md:text-4xl font-bold text-cyan-400 mb-2',
+                  classes: 'text-3xl md:text-4xl font-bold text-rose-400 mb-2 shadow-lg shadow-rose-500/10',
                   attributes: {'data-counter': '4.45', 'data-prefix': '\$', 'data-suffix': 'M'},
                   [Component.text('\$0M')],
                 ),
@@ -68,7 +68,7 @@ class ProblemSection extends StatelessComponent {
               classes: 'stagger-item text-center p-6',
               [
                 div(
-                  classes: 'text-3xl md:text-4xl font-bold text-cyan-400 mb-2',
+                  classes: 'text-3xl md:text-4xl font-bold text-rose-400 mb-2 shadow-lg shadow-rose-500/10',
                   attributes: {'data-counter': '3', 'data-suffix': 'x'},
                   [Component.text('0x')],
                 ),

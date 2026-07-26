@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../config.dart';
@@ -16,7 +16,7 @@ class TeamSection extends StatelessComponent {
         div(classes: 'scroll-reveal text-center mb-16', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Team')],
           ),
           h2(
@@ -31,6 +31,14 @@ class TeamSection extends StatelessComponent {
                 'Our team includes software developers, AI engineers, product designers, and domain experts building the future of API security.',
               ),
             ],
+          ),
+        ]),
+        div(classes: 'max-w-2xl mx-auto mb-12 scroll-reveal', [
+          img(
+            src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&h=400&fit=crop&q=80',
+            alt: 'Engineering Team Collaboration',
+            classes: 'w-full rounded-2xl border border-slate-800',
+            attributes: {'loading': 'lazy'},
           ),
         ]),
         div(
@@ -71,7 +79,7 @@ class _TeamMember extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'stagger-item glow-card text-center p-6 rounded-2xl bg-slate-900/50 border border-slate-800',
+          'stagger-item glow-card text-center p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-rose-500/20 transition-all',
       [
         img(
           src: imageUrl,
@@ -84,7 +92,7 @@ class _TeamMember extends StatelessComponent {
           [Component.text(name)],
         ),
         p(
-          classes: 'text-cyan-400 text-sm font-medium mb-3',
+          classes: 'text-rose-400 text-sm font-medium mb-3',
           [Component.text(role)],
         ),
         p(
@@ -95,7 +103,7 @@ class _TeamMember extends StatelessComponent {
         a(
           href: linkedin,
           classes:
-              'inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-cyan-400 transition-colors',
+              'inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-rose-400 transition-colors',
           [
             img(src: '/images/logo-linkedin.svg', alt: 'LinkedIn', classes: 'w-4 h-4'),
             span([Component.text('LinkedIn')]),

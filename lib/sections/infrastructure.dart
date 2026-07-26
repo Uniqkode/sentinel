@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -15,7 +15,7 @@ class InfrastructureSection extends StatelessComponent {
         div(classes: 'text-center mb-16 scroll-reveal', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Technology & Infrastructure')],
           ),
           h2(
@@ -32,10 +32,11 @@ class InfrastructureSection extends StatelessComponent {
             ],
           ),
         ]),
-        div(classes: 'flex items-center justify-center space-x-12 mb-12 scroll-reveal', [
-          img(src: '/images/logo-aws.svg', alt: 'Amazon Web Services', classes: 'h-10 opacity-70 hover:opacity-100 transition-opacity'),
-          img(src: '/images/logo-nvidia.svg', alt: 'NVIDIA', classes: 'h-10 opacity-70 hover:opacity-100 transition-opacity'),
-        ]),
+        img(
+          src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=500&fit=crop&q=80',
+          alt: 'Data center servers - infrastructure',
+          classes: 'mx-auto mb-12 rounded-2xl shadow-lg shadow-rose-500/10 border border-slate-800 max-w-4xl w-full',
+        ),
         div(
           classes:
               'stagger-group grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto',
@@ -101,7 +102,7 @@ class _InfraBlock extends StatelessComponent {
             div(classes: 'flex items-start space-x-3', [
               div(
                 classes:
-                    'w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0',
+                    'w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0',
                 [],
               ),
               div([

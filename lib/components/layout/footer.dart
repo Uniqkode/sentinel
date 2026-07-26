@@ -90,7 +90,7 @@ class Footer extends StatelessComponent {
       ul(classes: 'space-y-3', [
         a(
           href: SiteConfig.twitterUrl,
-          classes: 'text-slate-400 hover:text-white transition-colors flex items-center space-x-2',
+          classes: 'text-slate-400 hover:text-rose-400 transition-colors flex items-center space-x-2',
           [
             img(src: '/images/logo-x.svg', alt: 'X', classes: 'w-4 h-4'),
             span([Component.text('X / Twitter')]),
@@ -98,7 +98,7 @@ class Footer extends StatelessComponent {
         ),
         a(
           href: SiteConfig.linkedinUrl,
-          classes: 'text-slate-400 hover:text-white transition-colors flex items-center space-x-2',
+          classes: 'text-slate-400 hover:text-rose-400 transition-colors flex items-center space-x-2',
           [
             img(src: '/images/logo-linkedin.svg', alt: 'LinkedIn', classes: 'w-4 h-4'),
             span([Component.text('LinkedIn')]),
@@ -112,7 +112,7 @@ class Footer extends StatelessComponent {
     return li([
       a(
         href: href,
-        classes: 'text-slate-400 hover:text-cyan-400 text-sm transition-colors',
+        classes: 'text-slate-400 hover:text-rose-400 text-sm transition-colors',
         [Component.text(text)],
       ),
     ]);

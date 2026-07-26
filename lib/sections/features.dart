@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -16,7 +16,7 @@ class FeaturesSection extends StatelessComponent {
         div(classes: 'text-center mb-16 scroll-reveal', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Features')],
           ),
           h2(
@@ -31,6 +31,14 @@ class FeaturesSection extends StatelessComponent {
                 'Everything your team needs to detect, prevent, and respond to API security threats before they impact your users.',
               ),
             ],
+          ),
+        ]),
+        div(classes: 'max-w-3xl mx-auto mb-12 scroll-reveal', [
+          img(
+            src: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=500&fit=crop&q=80',
+            alt: 'Developer Security Features',
+            classes: 'w-full rounded-2xl border border-slate-800',
+            attributes: {'loading': 'lazy'},
           ),
         ]),
         div(classes: 'stagger-group', [
@@ -89,9 +97,7 @@ class FeaturesSection extends StatelessComponent {
             ],
           ),
         ]),
-        div(classes: 'mt-16 max-w-3xl mx-auto scroll-reveal', attributes: {'data-delay': '200'}, [
-          img(src: '/images/security-report.svg', alt: 'Sentinel Security Report', classes: 'w-full rounded-2xl shadow-2xl shadow-cyan-500/10 border border-slate-800', attributes: {'loading': 'lazy'}),
-        ]),
+
       ],
     );
   }

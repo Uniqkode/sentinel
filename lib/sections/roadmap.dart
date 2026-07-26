@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -9,17 +9,18 @@ class RoadmapSection extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return SectionWrapper(
+      dark: true,
       id: 'roadmap',
       children: [
         div(classes: 'scroll-reveal text-center mb-16', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Roadmap')],
           ),
           h2(
             classes:
-                'text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6',
+                'text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6',
             [Component.text('Product Roadmap')],
           ),
         ]),
@@ -96,12 +97,12 @@ class _RoadmapItem extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'scroll-reveal glow-card flex items-start space-x-6 p-6 rounded-2xl ${active ? 'bg-cyan-50 border border-cyan-200' : 'bg-slate-50 border border-slate-200'} transition-all',
+          'scroll-reveal glow-card flex items-start space-x-6 p-6 rounded-2xl ${active ? 'bg-rose-500/10 border border-rose-500/30' : 'bg-slate-900/50 border border-slate-800'} transition-all',
       attributes: {'data-delay': '$delay'},
       [
         div(
           classes:
-              'shrink-0 w-12 h-12 rounded-xl ${active ? 'bg-cyan-500 text-slate-950' : 'bg-slate-200 text-slate-600'} flex items-center justify-center',
+              'shrink-0 w-12 h-12 rounded-xl ${active ? 'bg-rose-500 text-white' : 'bg-slate-800 text-slate-400'} flex items-center justify-center',
           [
             span(
               classes: 'text-sm font-bold',
@@ -113,18 +114,18 @@ class _RoadmapItem extends StatelessComponent {
           div(classes: 'flex items-center space-x-3 mb-1', [
             h3(
               classes:
-                  'text-lg font-semibold ${active ? 'text-slate-900' : 'text-slate-800'}',
+                  'text-lg font-semibold ${active ? 'text-rose-400' : 'text-white'}',
               [Component.text(title)],
             ),
             if (active)
               span(
                 classes:
-                    'px-2 py-0.5 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-full',
+                    'px-2 py-0.5 text-xs font-medium bg-rose-500/10 text-rose-400 rounded-full',
                 [Component.text('Current')],
               ),
           ]),
           p(
-            classes: 'text-slate-600 text-sm leading-relaxed',
+            classes: 'text-slate-400 text-sm leading-relaxed',
             [Component.text(description)],
           ),
         ]),

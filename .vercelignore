@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.pub-cache/
+.pub/
+.dart_tool/
+build/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lock files
+package-lock.json
+pubspec.lock
+
+# Source files (we deploy built output only)
+lib/
+test/

@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -15,7 +15,7 @@ class WhyNowSection extends StatelessComponent {
         div(classes: 'scroll-reveal max-w-4xl mx-auto text-center', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-400 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Why Now')],
           ),
           h2(

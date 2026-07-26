@@ -55,7 +55,7 @@ class Header extends StatelessComponent {
           a(
             href: link.$2,
             classes:
-                'text-sm text-slate-400 hover:text-white transition-colors duration-200',
+                'text-sm text-slate-400 hover:text-rose-400 transition-colors duration-200',
             [Component.text(link.$1)],
           ),
       ]),
@@ -66,7 +66,7 @@ class Header extends StatelessComponent {
           a(
             href: '#contact',
             classes:
-                'text-sm text-slate-400 hover:text-white transition-colors',
+                'text-sm text-slate-400 hover:text-rose-400 transition-colors',
             [Component.text('Contact')],
           ),
           SentinelButton(label: 'Request Demo', href: '#demo', small: true),
@@ -130,7 +130,7 @@ class Header extends StatelessComponent {
         tag: 'div',
         id: 'mobile-menu',
         classes:
-            'md:hidden fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-[60] bg-slate-950 border-l border-cyan-500/20 shadow-2xl shadow-cyan-500/5 overflow-y-auto transform translate-x-full transition-transform duration-300',
+            'md:hidden fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-[60] bg-slate-950 border-l border-rose-500/20 shadow-2xl shadow-rose-500/5 overflow-y-auto transform translate-x-full transition-transform duration-300',
         children: [
           div(classes: 'flex items-center justify-between p-5 border-b border-slate-800', [
             div(classes: 'flex items-center space-x-2', [
@@ -167,7 +167,7 @@ class Header extends StatelessComponent {
               a(
                 href: link.$2,
                 classes:
-                    'block px-5 py-3.5 text-slate-300 hover:text-white hover:bg-white/5 hover:border hover:border-cyan-500/20 rounded-lg transition-all duration-200 text-base font-medium',
+                    'block px-5 py-3.5 text-slate-300 hover:text-rose-400 hover:bg-white/5 hover:border hover:border-rose-500/20 rounded-lg transition-all duration-200 text-base font-medium',
                 [Component.text(link.$1)],
               ),
           ]),

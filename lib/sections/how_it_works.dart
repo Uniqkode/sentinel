@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -9,18 +9,27 @@ class HowItWorksSection extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return SectionWrapper(
+      dark: true,
       id: 'how-it-works',
       children: [
         div(classes: 'scroll-reveal text-center mb-16', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('How It Works')],
           ),
           h2(
             classes:
-                'text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6',
+                'text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6',
             [Component.text('Four Steps to API Security')],
+          ),
+        ]),
+        div(classes: 'max-w-3xl mx-auto mb-12 scroll-reveal', [
+          img(
+            src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=500&fit=crop&q=80',
+            alt: 'Automated Security Monitoring',
+            classes: 'w-full rounded-2xl border border-slate-800',
+            attributes: {'loading': 'lazy'},
           ),
         ]),
         div(
@@ -76,22 +85,22 @@ class _StepCard extends StatelessComponent {
       [
         div(
           classes:
-              'w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan-500/20',
+              'w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-rose-500/20',
           [
             span(
               classes:
-                  'text-xl font-bold text-slate-950',
+                  'text-xl font-bold text-white',
               [Component.text(number)],
             ),
           ],
         ),
         h3(
           classes:
-              'text-xl font-semibold text-slate-900 mb-3',
+              'text-xl font-semibold text-white mb-3',
           [Component.text(title)],
         ),
         p(
-          classes: 'text-slate-600 text-sm leading-relaxed',
+          classes: 'text-slate-400 text-sm leading-relaxed',
           [Component.text(description)],
         ),
       ],

@@ -17,12 +17,12 @@ class FeatureCard extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'group glow-card relative p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/5',
+          'group glow-card relative p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-rose-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/15',
       [
         div(classes: 'text-3xl mb-4', [Component.text(icon)]),
         h3(
           classes:
-              'text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors',
+              'text-lg font-semibold text-white mb-2 group-hover:text-rose-400 transition-colors',
           [Component.text(title)],
         ),
         p(classes: 'text-slate-400 text-sm leading-relaxed', [
@@ -50,7 +50,7 @@ class StatCard extends StatelessComponent {
       [
         div(
           classes:
-              'text-3xl md:text-4xl font-bold text-cyan-400 mb-2',
+              'text-3xl md:text-4xl font-bold text-rose-400 mb-2',
           [Component.text(value)],
         ),
         div(

@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -14,21 +14,29 @@ class SolutionSection extends StatelessComponent {
         div(classes: 'text-center mb-16 scroll-reveal', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('The Solution')],
           ),
           h2(
             classes:
-                'text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6',
+                'text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6',
             [Component.text('Sentinel Catches What Your CI/CD Misses')],
           ),
           p(
-            classes: 'text-slate-600 text-lg max-w-3xl mx-auto',
+            classes: 'text-slate-400 text-lg max-w-3xl mx-auto',
             [
               Component.text(
                 'A continuous AI-powered security layer that monitors your API surface in real time, detecting drift, leaks, and breaking changes before they reach production.',
               ),
             ],
+          ),
+        ]),
+        div(classes: 'max-w-3xl mx-auto mb-12 scroll-reveal', [
+          img(
+            src: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=500&fit=crop&q=80',
+            alt: 'API Security Monitoring',
+            classes: 'w-full rounded-2xl border border-slate-800',
+            attributes: {'loading': 'lazy'},
           ),
         ]),
         div(classes: 'stagger-group', [
@@ -87,11 +95,11 @@ class _SolutionCard extends StatelessComponent {
         div(classes: 'text-4xl mb-4', [Component.text(icon)]),
         h3(
           classes:
-              'text-xl font-semibold text-slate-900 mb-3',
+              'text-xl font-semibold text-white mb-3',
           [Component.text(title)],
         ),
         p(
-          classes: 'text-slate-600 leading-relaxed',
+          classes: 'text-slate-400 leading-relaxed',
           [Component.text(description)],
         ),
       ],

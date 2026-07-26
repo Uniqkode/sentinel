@@ -21,7 +21,7 @@ class SiteConfig {
 
   // ─── Form Submission ─────────────────────────────────────────
   static const String formsubmitEmail = 'hello@$domain';
-  static const String formRedirectBase = 'http://localhost:8080';
+  static const String formRedirectBase = siteUrl;
 
   // ─── Social Links ────────────────────────────────────────────
   static const String twitterUrl = 'https://x.com/sentinelai';

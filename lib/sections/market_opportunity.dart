@@ -1,4 +1,4 @@
-﻿import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
 import '../components/layout/section_wrapper.dart';
@@ -9,18 +9,27 @@ class MarketOpportunitySection extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return SectionWrapper(
+      dark: true,
       id: 'market',
       children: [
         div(classes: 'scroll-reveal text-center mb-16', [
           p(
             classes:
-                'text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3',
+                'text-rose-500 font-semibold text-sm uppercase tracking-wider mb-3',
             [Component.text('Market Opportunity')],
           ),
           h2(
             classes:
-                'text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6',
+                'text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6',
             [Component.text('Targeting the Fastest-Growing Attack Surface')],
+          ),
+        ]),
+        div(classes: 'max-w-2xl mx-auto mb-12 scroll-reveal', [
+          img(
+            src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&h=400&fit=crop&q=80',
+            alt: 'Market Analysis Dashboard',
+            classes: 'w-full rounded-2xl border border-slate-800',
+            attributes: {'loading': 'lazy'},
           ),
         ]),
         div(
@@ -83,19 +92,19 @@ class _MarketCard extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'stagger-item glow-card p-6 rounded-2xl bg-slate-50 border border-slate-200',
+          'stagger-item glow-card p-6 rounded-2xl bg-slate-900/50 border border-slate-800',
       [
         h3(
           classes:
-              'text-lg font-semibold text-slate-900 mb-4',
+              'text-lg font-semibold text-white mb-4',
           [Component.text(title)],
         ),
         ul(classes: 'space-y-2', [
           for (final item in items)
             li(classes: 'flex items-center space-x-2', [
-              span(classes: 'text-cyan-500 text-sm', [Component.text('\u2022')]),
+              span(classes: 'text-rose-500 text-sm', [Component.text('\u2022')]),
               span(
-                classes: 'text-slate-600 text-sm',
+                classes: 'text-slate-400 text-sm',
                 [Component.text(item)],
               ),
             ]),

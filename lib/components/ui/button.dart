@@ -24,10 +24,10 @@ class SentinelButton extends StatelessComponent {
     String colorClass;
     if (outline) {
       colorClass =
-          'border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400';
+          'border border-rose-500/30 text-rose-400 hover:bg-rose-500/10 hover:border-rose-400';
     } else if (primary) {
       colorClass =
-          'bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25';
+          'bg-rose-500 text-white hover:bg-rose-400 shadow-lg shadow-rose-500/25';
     } else {
       colorClass =
           'bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700';

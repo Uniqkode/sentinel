@@ -11,15 +11,16 @@ class TermsOfUsePage extends StatelessComponent {
     return Component.fragment([
       div(classes: 'pt-24', []),
       SectionWrapper(
+        dark: true,
         children: [
           div(classes: 'max-w-3xl mx-auto', [
             h1(
               classes:
-                  'text-4xl font-bold text-slate-900 mb-8',
+                  'text-4xl font-bold text-white mb-8',
               [Component.text('Terms of Use')],
             ),
             p(
-              classes: 'text-slate-500 text-sm mb-8',
+              classes: 'text-slate-400 text-sm mb-8',
               [Component.text('Last updated: July 2026')],
             ),
             _Section(
@@ -85,11 +86,11 @@ class _Section extends StatelessComponent {
   Component build(BuildContext context) {
     return div(classes: 'mb-8', [
       h2(
-        classes: 'text-xl font-semibold text-slate-900 mb-3',
+        classes: 'text-xl font-semibold text-white mb-3',
         [Component.text(title)],
       ),
       p(
-        classes: 'text-slate-600 leading-relaxed',
+        classes: 'text-slate-400 leading-relaxed',
         [Component.text(content)],
       ),
     ]);
@@ -103,11 +104,11 @@ class IntellectualProperty extends StatelessComponent {
   Component build(BuildContext context) {
     return div(classes: 'mb-8', [
       h2(
-        classes: 'text-xl font-semibold text-slate-900 mb-3',
+        classes: 'text-xl font-semibold text-white mb-3',
         [Component.text('5. Intellectual Property')],
       ),
       p(
-        classes: 'text-slate-600 leading-relaxed',
+        classes: 'text-slate-400 leading-relaxed',
         [
           Component.text(
             'All content, trademarks, and intellectual property on this website and the Sentinel platform are owned by Sentinel Labs. You may not reproduce, distribute, or create derivative works without our written permission.',
