@@ -32,6 +32,27 @@ class InfrastructureSection extends StatelessComponent {
             ],
           ),
         ]),
+        div(
+          classes:
+              'flex items-center justify-center gap-16 mb-12 scroll-reveal',
+          [
+            img(
+              src: '/images/logo-aws.svg',
+              alt: 'Amazon Web Services',
+              classes: 'h-10 opacity-70 hover:opacity-100 transition-opacity',
+            ),
+            img(
+              src: '/images/logo-nvidia.svg',
+              alt: 'NVIDIA',
+              classes: 'h-7 opacity-70 hover:opacity-100 transition-opacity',
+            ),
+            img(
+              src: '/images/logo-azure.svg',
+              alt: 'Microsoft Azure',
+              classes: 'h-10 opacity-70 hover:opacity-100 transition-opacity',
+            ),
+          ],
+        ),
         img(
           src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=500&fit=crop&q=80',
           alt: 'Data center servers - infrastructure',
@@ -42,8 +63,6 @@ class InfrastructureSection extends StatelessComponent {
               'stagger-group grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto',
           [
             _InfraBlock(
-              logo: '/images/logo-aws.svg',
-              logoAlt: 'AWS',
               title: 'AWS Cloud',
               items: [
                 ('Amazon CloudWatch', 'Real-time telemetry streaming and monitoring of API traffic patterns across all connected gateways.'),
@@ -55,8 +74,6 @@ class InfrastructureSection extends StatelessComponent {
               ],
             ),
             _InfraBlock(
-              logo: '/images/logo-nvidia.svg',
-              logoAlt: 'NVIDIA',
               title: 'NVIDIA GPU',
               items: [
                 ('Triton Inference Server', 'Rapid pattern analysis and low-latency inference for real-time anomaly detection across API traffic.'),
@@ -66,7 +83,6 @@ class InfrastructureSection extends StatelessComponent {
               ],
             ),
             _InfraBlock(
-              logoAlt: 'Azure',
               title: 'Microsoft Azure',
               items: [
                 ('Azure Monitor', 'End-to-end observability with distributed tracing across API microservices and serverless functions.'),
@@ -86,14 +102,10 @@ class InfrastructureSection extends StatelessComponent {
 
 class _InfraBlock extends StatelessComponent {
   const _InfraBlock({
-    this.logo,
-    required this.logoAlt,
     required this.title,
     required this.items,
   });
 
-  final String? logo;
-  final String logoAlt;
   final String title;
   final List<(String, String)> items;
 
@@ -104,8 +116,6 @@ class _InfraBlock extends StatelessComponent {
           'stagger-item glow-card p-6 rounded-2xl bg-slate-900/50 border border-slate-800',
       [
         div(classes: 'scroll-reveal mb-6', [
-          if (logo != null)
-            img(src: logo!, alt: logoAlt, classes: 'h-6 mb-2'),
           h3(
             classes: 'text-xl font-semibold text-white',
             [Component.text(title)],

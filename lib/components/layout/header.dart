@@ -47,6 +47,7 @@ class Header extends StatelessComponent {
       ('Technology', '#technology'),
       ('Roadmap', '#roadmap'),
       ('Team', '#team'),
+      ('Pricing', '#pricing'),
     ];
 
     return div(classes: 'flex items-center', [
@@ -111,6 +112,7 @@ class Header extends StatelessComponent {
       ('Technology', '#technology'),
       ('Roadmap', '#roadmap'),
       ('Team', '#team'),
+      ('Pricing', '#pricing'),
       ('Demo', '#demo'),
       ('Contact', '#contact'),
     ];

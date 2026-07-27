@@ -60,7 +60,7 @@ class Footer extends StatelessComponent {
         _footerLink('Features', '#features'),
         _footerLink('Technology', '#technology'),
         _footerLink('Roadmap', '#roadmap'),
-        _footerLink('Pricing', '#'),
+        _footerLink('Pricing', '#pricing'),
         _footerLink('Request Demo', '#demo'),
       ]),
     ]);

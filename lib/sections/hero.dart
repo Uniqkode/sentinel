@@ -46,8 +46,8 @@ class HeroSection extends StatelessComponent {
               [
                 SentinelButton(label: 'Request Demo', href: '#demo'),
                 SentinelButton(
-                  label: 'Join Waitlist',
-                  href: '#final-cta',
+                  label: 'View Features',
+                  href: '#features',
                   outline: true,
                 ),
               ],

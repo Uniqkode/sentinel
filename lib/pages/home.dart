@@ -12,6 +12,7 @@ import '../sections/market_opportunity.dart';
 import '../sections/traction.dart';
 import '../sections/roadmap.dart';
 import '../sections/team.dart';
+import '../sections/pricing_section.dart';
 import '../sections/demo_form_section.dart';
 import '../sections/contact_section.dart';
 
@@ -33,6 +34,7 @@ class HomePage extends StatelessComponent {
       TractionSection(),
       RoadmapSection(),
       TeamSection(),
+      PricingSection(),
       DemoFormSection(),
       ContactSection(),
     ]);
