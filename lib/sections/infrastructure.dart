@@ -27,7 +27,7 @@ class InfrastructureSection extends StatelessComponent {
             classes: 'text-slate-400 text-lg max-w-3xl mx-auto',
             [
               Component.text(
-                'Our platform leverages cloud infrastructure and GPU-accelerated computing for secure data storage, real-time telemetry, AI model inference, and scalable processing.',
+                'Our platform leverages multi-cloud infrastructure and GPU-accelerated computing for secure data storage, real-time telemetry, AI model inference, and scalable processing.',
               ),
             ],
           ),
@@ -39,12 +39,12 @@ class InfrastructureSection extends StatelessComponent {
         ),
         div(
           classes:
-              'stagger-group grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto',
+              'stagger-group grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto',
           [
             _InfraBlock(
               logo: '/images/logo-aws.svg',
               logoAlt: 'AWS',
-              title: 'How We Use AWS',
+              title: 'AWS Cloud',
               items: [
                 ('Amazon CloudWatch', 'Real-time telemetry streaming and monitoring of API traffic patterns across all connected gateways.'),
                 ('Amazon Kinesis', 'High-throughput streaming for processing millions of API requests per second with sub-second latency.'),
@@ -57,12 +57,24 @@ class InfrastructureSection extends StatelessComponent {
             _InfraBlock(
               logo: '/images/logo-nvidia.svg',
               logoAlt: 'NVIDIA',
-              title: 'How We Use NVIDIA',
+              title: 'NVIDIA GPU',
               items: [
                 ('Triton Inference Server', 'Rapid pattern analysis and low-latency inference for real-time anomaly detection across API traffic.'),
                 ('CUDA Acceleration', 'GPU-accelerated parallel processing for analyzing thousands of endpoints simultaneously.'),
                 ('TensorRT Optimization', 'Inference optimization reducing model latency by up to 10x for production-grade speed.'),
                 ('GPU-Accelerated ML', 'Scalable AI development for training and deploying sequence prediction models at scale.'),
+              ],
+            ),
+            _InfraBlock(
+              logoAlt: 'Azure',
+              title: 'Microsoft Azure',
+              items: [
+                ('Azure Monitor', 'End-to-end observability with distributed tracing across API microservices and serverless functions.'),
+                ('Azure Event Hubs', 'Real-time event ingestion for high-throughput API log streaming and security telemetry.'),
+                ('Azure Functions', 'Event-driven serverless compute for automated security response and alerting workflows.'),
+                ('Azure Cosmos DB', 'Globally distributed NoSQL database for API schema versioning and audit history.'),
+                ('Azure Sentinel', 'Cloud-native SIEM for unified threat detection and automated incident response.'),
+                ('Azure DevOps', 'CI/CD integration for automated security scanning in deployment pipelines.'),
               ],
             ),
           ],
@@ -74,13 +86,13 @@ class InfrastructureSection extends StatelessComponent {
 
 class _InfraBlock extends StatelessComponent {
   const _InfraBlock({
-    required this.logo,
+    this.logo,
     required this.logoAlt,
     required this.title,
     required this.items,
   });
 
-  final String logo;
+  final String? logo;
   final String logoAlt;
   final String title;
   final List<(String, String)> items;
@@ -92,6 +104,8 @@ class _InfraBlock extends StatelessComponent {
           'stagger-item glow-card p-6 rounded-2xl bg-slate-900/50 border border-slate-800',
       [
         div(classes: 'scroll-reveal mb-6', [
+          if (logo != null)
+            img(src: logo!, alt: logoAlt, classes: 'h-6 mb-2'),
           h3(
             classes: 'text-xl font-semibold text-white',
             [Component.text(title)],

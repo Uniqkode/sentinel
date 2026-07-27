@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <path d="M24.2 2.3L44.4 8.4v19.2c0 0.1-0.1 0.2-0.1 0.3L35 41.5 24.2 37.9V2.3z" fill="#0089D6"/>
+  <path d="M44.4 8.4L64.6 2.3v35.6L52.2 41.5 44.4 27.9V8.4z" fill="#0089D6"/>
+  <path d="M44.4 27.9L24.2 37.9l10.8 6.1 20.4-6.2-11-15.3z" fill="#0078D4"/>
+  <path d="M44.4 8.4L24.2 2.3v35.6l20.2 10-11.2-15.5h21.4z" fill="#0089D6"/>
+  <text x="72" y="18" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Azure</text>
+</svg>

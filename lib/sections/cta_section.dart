@@ -3,7 +3,7 @@ import 'package:jaspr/dom.dart';
 
 import '../config.dart';
 import '../components/layout/section_wrapper.dart';
-import '../components/forms/waitlist_form.dart';
+import '../components/ui/button.dart';
 
 class CtaSection extends StatelessComponent {
   const CtaSection({super.key});
@@ -41,31 +41,25 @@ class CtaSection extends StatelessComponent {
                   'text-slate-400 text-lg mb-8 max-w-2xl mx-auto',
               [
                 Component.text(
-                  'Join the Sentinel beta and catch security issues before they reach production. Get early access to AI-powered API security.',
+                  'Start detecting security issues before they reach production. Book a demo or contact us to get started.',
                 ),
               ],
             ),
             div(
-              classes: 'relative inline-block',
+              classes: 'flex flex-col sm:flex-row gap-4 justify-center',
               [
-                div(
-                  classes: 'absolute -inset-1 bg-gradient-to-r from-rose-500/30 via-rose-500/20 to-rose-500/30 rounded-xl blur-sm pointer-events-none',
-                  [],
+                SentinelButton(label: 'Request Demo', href: '#demo'),
+                SentinelButton(
+                  label: 'Contact Us',
+                  href: '#contact',
+                  outline: true,
                 ),
-                WaitlistForm(),
               ],
             ),
             div(
               classes:
                   'mt-6 flex items-center justify-center space-x-4 text-sm',
               [
-                a(
-                  href: '#demo',
-                  classes:
-                      'text-rose-400 hover:text-rose-300 transition-colors',
-                  [Component.text('Schedule a Demo \u2192')],
-                ),
-                span(classes: 'text-slate-600', [Component.text('|')]),
                 a(
                   href: 'mailto:${SiteConfig.contactEmail}',
                   classes:

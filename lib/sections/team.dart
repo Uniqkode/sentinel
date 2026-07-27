@@ -43,7 +43,7 @@ class TeamSection extends StatelessComponent {
         ]),
         div(
           classes:
-              'stagger-group grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto',
+              'stagger-group grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto',
           [
             for (final member in SiteConfig.team)
               _TeamMember(
@@ -79,25 +79,25 @@ class _TeamMember extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'stagger-item glow-card text-center p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-rose-500/20 transition-all',
+          'stagger-item glow-card text-center p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-rose-500/20 transition-all',
       [
         img(
           src: imageUrl,
           alt: name,
-          classes: 'w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-slate-700',
+          classes: 'w-28 h-28 rounded-full mx-auto mb-5 object-cover border-2 border-slate-700',
           attributes: {'loading': 'lazy'},
         ),
         h3(
-          classes: 'text-lg font-semibold text-white',
+          classes: 'text-xl font-bold text-white mb-1',
           [Component.text(name)],
         ),
         p(
-          classes: 'text-rose-400 text-sm font-medium mb-3',
+          classes: 'text-rose-400 text-sm font-semibold mb-4',
           [Component.text(role)],
         ),
         p(
           classes:
-              'text-slate-400 text-sm leading-relaxed mb-4',
+              'text-slate-400 text-sm leading-relaxed mb-5',
           [Component.text(bio)],
         ),
         a(

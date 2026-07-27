@@ -13,7 +13,6 @@ import '../sections/traction.dart';
 import '../sections/roadmap.dart';
 import '../sections/team.dart';
 import '../sections/demo_form_section.dart';
-import '../sections/cta_section.dart';
 import '../sections/contact_section.dart';
 
 class HomePage extends StatelessComponent {
@@ -36,7 +35,6 @@ class HomePage extends StatelessComponent {
       TeamSection(),
       DemoFormSection(),
       ContactSection(),
-      CtaSection(),
     ]);
   }
 }

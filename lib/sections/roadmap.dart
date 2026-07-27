@@ -33,7 +33,7 @@ class RoadmapSection extends StatelessComponent {
               title: 'MVP Development',
               description:
                   'Core API schema diffing engine, basic alert system, and OpenAPI/Swagger integration.',
-              active: true,
+              completed: true,
               delay: 0,
             ),
             _RoadmapItem(
@@ -41,6 +41,7 @@ class RoadmapSection extends StatelessComponent {
               title: 'Beta Testing',
               description:
                   'Private beta with selected fintech and backend teams. Iterate based on real-world feedback.',
+              completed: true,
               delay: 100,
             ),
             _RoadmapItem(
@@ -48,13 +49,14 @@ class RoadmapSection extends StatelessComponent {
               title: 'AI Model Improvement',
               description:
                   'Advanced anomaly detection, NLP-powered credential scanning, and regression impact analysis.',
+              active: true,
               delay: 200,
             ),
             _RoadmapItem(
               phase: 'Phase 4',
               title: 'Cloud Deployment',
               description:
-                  'Full AWS infrastructure with CloudWatch telemetry, Kinesis streaming, and Bedrock integration.',
+                  'Full AWS + Azure infrastructure with CloudWatch telemetry, Kinesis streaming, and Bedrock integration.',
               delay: 300,
             ),
             _RoadmapItem(
@@ -84,6 +86,7 @@ class _RoadmapItem extends StatelessComponent {
     required this.title,
     required this.description,
     this.active = false,
+    this.completed = false,
     this.delay = 0,
   });
 
@@ -91,22 +94,26 @@ class _RoadmapItem extends StatelessComponent {
   final String title;
   final String description;
   final bool active;
+  final bool completed;
   final int delay;
 
   @override
   Component build(BuildContext context) {
+    final isActive = active;
+    final isCompleted = completed;
+
     return div(
       classes:
-          'scroll-reveal glow-card flex items-start space-x-6 p-6 rounded-2xl ${active ? 'bg-rose-500/10 border border-rose-500/30' : 'bg-slate-900/50 border border-slate-800'} transition-all',
+          'scroll-reveal glow-card flex items-start space-x-6 p-6 rounded-2xl ${isActive ? 'bg-rose-500/10 border border-rose-500/30' : isCompleted ? 'bg-emerald-500/5 border border-emerald-500/20' : 'bg-slate-900/50 border border-slate-800'} transition-all',
       attributes: {'data-delay': '$delay'},
       [
         div(
           classes:
-              'shrink-0 w-12 h-12 rounded-xl ${active ? 'bg-rose-500 text-white' : 'bg-slate-800 text-slate-400'} flex items-center justify-center',
+              'shrink-0 w-12 h-12 rounded-xl ${isActive ? 'bg-rose-500 text-white' : isCompleted ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400'} flex items-center justify-center',
           [
             span(
               classes: 'text-sm font-bold',
-              [Component.text(phase.replaceAll('Phase ', ''))],
+              [Component.text(isCompleted ? '\u2713' : phase.replaceAll('Phase ', ''))],
             ),
           ],
         ),
@@ -114,14 +121,20 @@ class _RoadmapItem extends StatelessComponent {
           div(classes: 'flex items-center space-x-3 mb-1', [
             h3(
               classes:
-                  'text-lg font-semibold ${active ? 'text-rose-400' : 'text-white'}',
+                  'text-lg font-semibold ${isActive ? 'text-rose-400' : isCompleted ? 'text-emerald-400' : 'text-white'}',
               [Component.text(title)],
             ),
-            if (active)
+            if (isActive)
               span(
                 classes:
                     'px-2 py-0.5 text-xs font-medium bg-rose-500/10 text-rose-400 rounded-full',
                 [Component.text('Current')],
+              ),
+            if (isCompleted)
+              span(
+                classes:
+                    'px-2 py-0.5 text-xs font-medium bg-emerald-500/10 text-emerald-400 rounded-full',
+                [Component.text('Completed')],
               ),
           ]),
           p(

@@ -21,7 +21,7 @@ class TractionSection extends StatelessComponent {
           h2(
             classes:
                 'text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6',
-            [Component.text('Early Traction')],
+            [Component.text('Traction & Milestones')],
           ),
         ]),
         div(
@@ -29,22 +29,22 @@ class TractionSection extends StatelessComponent {
               'stagger-group max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8',
           [
             _TractionItem(
-              icon: '\u{1F680}',
-              title: 'MVP in Development',
+              icon: '\u2714',
+              title: 'MVP Launched',
               description:
-                  'Core API schema diffing and breaking change detection features are being built and tested internally.',
+                  'Core API schema diffing engine, breaking change detection, and credential scanning are live and operational.',
             ),
             _TractionItem(
               icon: '\u{1F465}',
-              title: 'Pilot Users',
+              title: 'Product Users',
               description:
-                  'Currently onboarding pilot users from fintech and healthtech API teams for early feedback.',
+                  'Onboarding product users from fintech and healthtech API teams with active feedback loops and iterative improvements.',
             ),
             _TractionItem(
-              icon: '\u{1F4E2}',
-              title: 'Beta Access Opening Soon',
+              icon: '\u{1F31F}',
+              title: 'Beta Access Live',
               description:
-                  'Private beta access is opening soon for selected backend teams. Join the waitlist to get early access.',
+                  'Private beta is live for selected backend teams. Sign up for a demo to get access and start securing your APIs.',
             ),
           ],
         ),
