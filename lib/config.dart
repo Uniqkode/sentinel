@@ -14,8 +14,8 @@ class SiteConfig {
 
   // ─── Contact Information ─────────────────────────────────────
   static const String contactEmail = 'hello@$domain';
-  static const String contactPhone = '+1 (555) 987-6543';
-  static const String contactAddress = '1234 Innovation Drive, Suite 500, San Francisco, CA 94105';
+  static const String contactPhone = '09067654698';
+  static const String contactAddress = 'Trans-Ekulu Enugu';
   static const String contactResponseTime = 'Within 24 hours';
   static const String contactSupportNote = 'Available for all plans';
 
@@ -24,8 +24,9 @@ class SiteConfig {
   static const String formRedirectBase = siteUrl;
 
   // ─── Social Links ────────────────────────────────────────────
-  static const String twitterUrl = 'https://x.com/sentinelai';
+  static const String twitterUrl = 'https://x.com/Ugochukwu_Zilla';
   static const String linkedinUrl = 'https://linkedin.com/company/sentinelai';
+  static const String facebookUrl = 'https://www.facebook.com/osumpaul.ugochukwu';
 
   // ─── SEO / Meta ──────────────────────────────────────────────
   static const String metaTitle = '$productName \u2014 AI-Powered API Security Agent';
@@ -35,25 +36,20 @@ class SiteConfig {
   // ─── Team Members ────────────────────────────────────────────
   static const List<TeamMember> team = [
     TeamMember(
-      name: 'Jordan Davis',
+      name: 'Osum Ugochukwu Paul',
       role: 'CEO & Founder',
-      bio: 'Backend security engineer with 8+ years building API infrastructure for fintech and enterprise platforms.',
-      imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/jordandavis',
+      bio: 'Visionary leader and security engineer dedicated to building autonomous AI solutions that protect API-first teams from regression attacks and data leaks.',
+      imageUrl: '/images/osum.png',
+      linkedin: 'https://www.linkedin.com/in/osum-ugochukwu-b7240114a',
+      twitter: 'https://x.com/Ugochukwu_Zilla',
+      facebook: 'https://www.facebook.com/osumpaul.ugochukwu',
     ),
     TeamMember(
-      name: 'Alex Kim',
-      role: 'CTO & AI Lead',
-      bio: 'ML engineer specializing in anomaly detection, sequence prediction, and NLP for security applications.',
-      imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/alexkim',
-    ),
-    TeamMember(
-      name: 'Sam Rivera',
-      role: 'Head of Product',
-      bio: 'Product leader focused on developer tools and security workflows. Previously built API monitoring products.',
-      imageUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/samrivera',
+      name: 'Ibrahim Abdullahi',
+      role: 'Chief Technology Officer',
+      bio: 'Experienced engineer leading AI model development, cloud infrastructure, and GPU-accelerated inference systems for real-time security analysis.',
+      imageUrl: '/images/male2.png',
+      linkedin: 'https://www.linkedin.com/in/ibrahim-abdullahi-sentinel',
     ),
   ];
 }
@@ -66,6 +62,8 @@ class TeamMember {
     required this.bio,
     required this.imageUrl,
     required this.linkedin,
+    this.twitter,
+    this.facebook,
   });
 
   final String name;
@@ -73,4 +71,6 @@ class TeamMember {
   final String bio;
   final String imageUrl;
   final String linkedin;
+  final String? twitter;
+  final String? facebook;
 }

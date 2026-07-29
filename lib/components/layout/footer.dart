@@ -104,6 +104,13 @@ class Footer extends StatelessComponent {
             span([Component.text('LinkedIn')]),
           ],
         ),
+        a(
+          href: SiteConfig.facebookUrl,
+          classes: 'text-slate-400 hover:text-rose-400 transition-colors flex items-center space-x-2',
+          [
+            span([Component.text('Facebook')]),
+          ],
+        ),
       ]),
     ]);
   }

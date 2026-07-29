@@ -28,22 +28,14 @@ class TeamSection extends StatelessComponent {
             classes: 'text-slate-400 text-lg max-w-2xl mx-auto',
             [
               Component.text(
-                'Our team includes software developers, AI engineers, product designers, and domain experts building the future of API security.',
+                'Experienced leaders building the future of autonomous API security.',
               ),
             ],
           ),
         ]),
-        div(classes: 'max-w-2xl mx-auto mb-12 scroll-reveal', [
-          img(
-            src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&h=400&fit=crop&q=80',
-            alt: 'Engineering Team Collaboration',
-            classes: 'w-full rounded-2xl border border-slate-800',
-            attributes: {'loading': 'lazy'},
-          ),
-        ]),
         div(
           classes:
-              'stagger-group grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto',
+              'stagger-group grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto',
           [
             for (final member in SiteConfig.team)
               _TeamMember(
@@ -52,6 +44,8 @@ class TeamSection extends StatelessComponent {
                 role: member.role,
                 bio: member.bio,
                 linkedin: member.linkedin,
+                twitter: member.twitter,
+                facebook: member.facebook,
               ),
           ],
         ),
@@ -67,6 +61,8 @@ class _TeamMember extends StatelessComponent {
     required this.role,
     required this.bio,
     required this.linkedin,
+    this.twitter,
+    this.facebook,
   });
 
   final String imageUrl;
@@ -74,6 +70,8 @@ class _TeamMember extends StatelessComponent {
   final String role;
   final String bio;
   final String linkedin;
+  final String? twitter;
+  final String? facebook;
 
   @override
   Component build(BuildContext context) {
@@ -84,31 +82,50 @@ class _TeamMember extends StatelessComponent {
         img(
           src: imageUrl,
           alt: name,
-          classes: 'w-28 h-28 rounded-full mx-auto mb-5 object-cover border-2 border-slate-700',
-          attributes: {'loading': 'lazy'},
+          classes: 'w-28 h-28 rounded-full mx-auto mb-5 object-cover border-2 border-rose-500/20',
+          attributes: {'loading': 'eager'},
         ),
         h3(
           classes: 'text-xl font-bold text-white mb-1',
           [Component.text(name)],
         ),
         p(
-          classes: 'text-rose-400 text-sm font-semibold mb-4',
+          classes: 'text-rose-400 text-sm font-semibold mb-3',
           [Component.text(role)],
         ),
         p(
           classes:
-              'text-slate-400 text-sm leading-relaxed mb-5',
+              'text-slate-400 text-sm leading-relaxed mb-6 max-w-xs mx-auto',
           [Component.text(bio)],
         ),
-        a(
-          href: linkedin,
-          classes:
-              'inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-rose-400 transition-colors',
-          [
-            img(src: '/images/logo-linkedin.svg', alt: 'LinkedIn', classes: 'w-4 h-4'),
-            span([Component.text('LinkedIn')]),
-          ],
-        ),
+        div(classes: 'flex items-center justify-center space-x-4', [
+          a(
+            href: linkedin,
+            classes:
+                'text-slate-500 hover:text-rose-400 transition-colors',
+            [
+              img(src: '/images/logo-linkedin.svg', alt: 'LinkedIn', classes: 'w-5 h-5'),
+            ],
+          ),
+          if (twitter != null)
+            a(
+              href: twitter!,
+              classes:
+                  'text-slate-500 hover:text-rose-400 transition-colors',
+              [
+                img(src: '/images/logo-x.svg', alt: 'X', classes: 'w-5 h-5'),
+              ],
+            ),
+          if (facebook != null)
+            a(
+              href: facebook!,
+              classes:
+                  'text-slate-500 hover:text-rose-400 transition-colors',
+              [
+                span(classes: 'text-lg text-slate-500 hover:text-rose-400 transition-colors', [Component.text('f')]),
+              ],
+            ),
+        ]),
       ],
     );
   }
