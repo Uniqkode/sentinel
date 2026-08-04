@@ -24,9 +24,9 @@ class SiteConfig {
   static const String formRedirectBase = siteUrl;
 
   // ─── Social Links ────────────────────────────────────────────
-  static const String twitterUrl = 'https://x.com/Ugochukwu_Zilla';
-  static const String linkedinUrl = 'https://linkedin.com/company/sentinelai';
-  static const String facebookUrl = 'https://www.facebook.com/osumpaul.ugochukwu';
+  static const String twitterUrl = 'https://x.com/SENTINELgroups';
+  static const String linkedinUrl = 'https://www.linkedin.com/company/137004378/';
+  // static const String facebookUrl = ''; // No company Facebook link provided
 
   // ─── SEO / Meta ──────────────────────────────────────────────
   static const String metaTitle = '$productName \u2014 AI-Powered API Security Agent';
